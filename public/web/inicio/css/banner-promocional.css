@@ -1,0 +1,33 @@
+/*SLIDER PRINCIPAL INICIO*/
+.contenedor_banner_promocional {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/*SLIDER IMAGENES*/
+.contenedor_banner_promocional .banner_promocional_imagen {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .contenedor_banner_promocional {
+        height: 90px;
+    }
+
+    .contenedor_banner_promocional .banner_promocional_imagen {
+        height: 90px;
+    }
+}
+
+@media (max-width: 500px) {
+    .contenedor_banner_promocional {
+        height: 55px;
+    }
+
+    .contenedor_banner_promocional .banner_promocional_imagen {
+        height: 55px;
+    }
+}

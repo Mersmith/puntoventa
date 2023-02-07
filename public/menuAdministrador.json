@@ -1,0 +1,55 @@
+[
+    {
+        "id": 1,
+        "nombrePrincipal": "Perfil",
+        "nombrePrincipalUrl": "administrador.perfil",
+        "subMenu1": []
+    },
+    {
+        "id": 2,
+        "nombrePrincipal": "Colores",
+        "nombrePrincipalUrl": "administrador.color.index",
+        "subMenu1": []
+    },
+    {
+        "id": 3,
+        "nombrePrincipal": "Categorias",
+        "nombrePrincipalUrl": "administrador.categoria.index",
+        "subMenu1": []
+    },
+    {
+        "id": 4,
+        "nombrePrincipal": "Marca",
+        "nombrePrincipalUrl": "administrador.marca.index",
+        "subMenu1": []
+    },
+    {
+        "id": 5,
+        "nombrePrincipal": "Etiquetas",
+        "nombrePrincipalUrl": "administrador.tag.index",
+        "subMenu1": []
+    },
+    {
+        "id": 6,
+        "nombrePrincipal": "Producto",
+        "nombrePrincipalUrl": "producto",
+        "subMenu1": [
+            {
+                "id": 1,
+                "nombreSubMenu1": "Todos los productos",
+                "nombreSubMenu1Url": "administrador.producto.index"
+            },
+            {
+                "id": 2,
+                "nombreSubMenu1": "Crear producto",
+                "nombreSubMenu1Url": "administrador.producto.crear"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "nombrePrincipal": "Proveedores",
+        "nombrePrincipalUrl": "administrador.proveedor.index",
+        "subMenu1": []
+    }
+]

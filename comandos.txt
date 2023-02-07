@@ -1,0 +1,555 @@
+**************************25/10/22***************************************
+
+PS C:\xampp\htdocs>composer create-project laravel/laravel PuntoDeVenta
+PS C:\xampp\htdocs>cd PuntoDeVenta
+PS C:\xampp\htdocs>code .
+
+->Crear comandos.txt
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git init
+git add .
+git commit -m "1-Instalación Laravel"
+git log
+git remote add origin https://github.com/Mersmith/PuntoDeVenta.git
+git push origin master
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+php artisan serve
+composer require laravel/jetstream
+php artisan jetstream:install livewire
+npm install
+npm run dev
+
+->Configurar el .env con la base de datos mysql = puntodeventadb.
+->Crear la base de datos en phpmyadmin.
+
+php artisan migrate
+
+*****************************************************************
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 1_Instalacion_Jetstream_Livewire
+git branch
+git status
+
+git add .
+git commit -m "Instalación de Jetstream y Livewire"
+git push origin 1_Instalacion_Jetstream_Livewire
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+->Crear Tablas
+->Modelo y Migración Categoria
+php artisan make:model Categoria -m
+
+->Modelo y Migración Proveedor
+php artisan make:model Proveedor -m
+
+->Modelo y Migración Producto
+php artisan make:model Producto -m
+
+->Modelo y Migración Imagen
+php artisan make:model Imagen -m
+
+->Modelo y Migración Cliente
+php artisan make:model Cliente -m
+
+->Modelo y Migración Cliente
+php artisan make:model Cliente -m
+
+->Modelo y Migración Compra
+php artisan make:model Compra -m
+
+->Modelo y Migración CompraDetalle
+php artisan make:model CompraDetalle -m
+
+->Modelo y Migración Venta
+php artisan make:model Venta -m
+
+->Modelo y Migración VentaDetalle
+php artisan make:model VentaDetalle -m
+
+php artisan migrate
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 2_Crear_Tablas_Modelos
+git branch
+git status
+
+git add .
+git commit -m "Crear tablas y modelos de las principales migraciones."
+git push origin 2_Crear_Tablas_Modelos
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+->RouteServiceProvider
+->View/Components/ -> Layouts
+->resources/Views/Layouts
+->routes
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 3_Ruta_Administrador_Web
+git branch
+git status
+
+git add .
+git commit -m "Se creo las Ruta Administrador y Web, y en las demás carpetas."
+git push origin 3_Ruta_Administrador_Web
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+->CRUD CATEGORIA
+php artisan make:livewire Administrador/Categoria/CategoriaLivewire
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 4_Crud_Categoria
+git branch
+git status
+
+git add .
+git commit -m "Crud Categoria"
+git push origin 4_Crud_Categoria
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+->CRUD PROVEEDORES
+php artisan make:livewire Administrador/Proveedor/ProveedorLivewire
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 5_Crud_Proveedor
+git branch
+git status
+
+git add .
+git commit -m "Crud Proveedor"
+git push origin 5_Crud_Proveedor
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+php artisan make:livewire Administrador/Producto/ProductoTodoLivewire
+php artisan make:livewire Administrador/Producto/ProductoCrearLivewire
+php artisan make:livewire Administrador/Producto/ProductoEditarLivewire
+
+->Build de ckeditor5 configurado
+->Cambiar el cdn por el build
+->Crear ruta ckeditor5
+
+
+->Modelo, Migración y Controlador Ckeditor
+php artisan make:controller Administrador/Ckeditor5Controller
+php artisan make:model Ckeditor -m
+
+php artisan migrate
+
+->APP_URL=http://localhost:8000
+->FILESYSTEM_DISK=public
+->eliminar el storage de public
+php artisan storage:link
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 6_Crear_Producto
+git branch
+git status
+
+git add .
+git commit -m "Crear producto, ckeditor5, cambiar de posición"
+git push origin 6_Crear_Producto
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+php artisan make:livewire Administrador/Producto/ProductoEstadoLivewire
+php artisan make:controller Administrador/ProductoController
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 7_Editar_Eliminar_Producto
+git branch
+git status
+
+git add .
+git commit -m "Editar y eliminar producto, ckeditor5, cambiar de posición"
+git push origin 7_Editar_Eliminar_Producto
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+php artisan make:livewire Administrador/Cliente/ClienteTodoLivewire
+php artisan make:livewire Administrador/Cliente/ClienteCrearLivewire
+php artisan make:livewire Administrador/Cliente/ClienteEditarLivewire
+php artisan make:livewire Administrador/Cliente/ClienteEstadoLivewire
+
+->app/Actions/Fortify/CreateNewUser -> Comentar campo nombre
+
+php artisan migrate:fresh
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 8_Crud_Cliente
+git branch
+git status
+
+git add .
+git commit -m "Crud cliente"
+git push origin 8_Crud_Cliente
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************13/01/23***************************************
+
+->Compras al proveedor
+php artisan make:livewire Administrador/Compra/CompraTodoLivewire
+php artisan make:livewire Administrador/Compra/CompraCrearLivewire
+php artisan make:livewire Administrador/Compra/CompraEditarLivewire
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 9_Crud_Compra
+git branch
+git status
+
+git add .
+git commit -m "Crud compra"
+git push origin 9_Crud_Compra
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+->PDF 
+composer require barryvdh/laravel-dompdf
+
+php artisan make:controller Administrador/CompraController
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 10_PDF_Compra
+git branch
+git status
+
+git add .
+git commit -m "Pdf Compra"
+git push origin 10_PDF_Compra
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+->impresión
+composer require mike42/escpos-php
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 11_Imprimir_Compra
+git branch
+git status
+
+git add .
+git commit -m "Imprimir Compra"
+git push origin 11_Imprimir_Compra
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+->Modelo y Migración Empresa
+php artisan make:model Empresa -m
+
+->Modelo y Migración Impresora
+php artisan make:model Impresora -m
+
+php artisan make:livewire Administrador/Empresa/EmpresaLivewire
+php artisan make:livewire Administrador/Impresora/ImpresoraLivewire
+
+php artisan migrate:rollback
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 12_Crud_Empresa_Impresora
+git branch
+git status
+
+git add .
+git commit -m "Crud de empresa e Impresora."
+git push origin 12_Crud_Empresa_Impresora
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************14/01/23***************************************
+
+->Reporte dia y rango fecha compra
+
+php artisan make:livewire Administrador/Reporte/CompraDiaLivewire
+php artisan make:livewire Administrador/Reporte/CompraFechaLivewire
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 13_Reporte_Dia_Fecha
+git branch
+git status
+
+git add .
+git commit -m "Reporte de día y fecha."
+git push origin 13_Reporte_Dia_Fecha
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+->Estadística
+
+php artisan make:livewire Administrador/Estadistica/EstadisticaLivewire
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 14_Estadistica
+git branch
+git status
+
+git add .
+git commit -m "Estadistica"
+git push origin 14_Estadistica
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+->Codigo de Qr
+->C:\xampp\php\php.ini
+->extension=gd retirar el ;
+
+composer require simplesoftwareio/simple-qrcode
+
+php artisan make:controller Web/ProductoController
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 15_Producto_QR
+git branch
+git status
+
+git add .
+git commit -m "Qr para producto y vista del producto."
+git push origin 15_Producto_QR
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************16/01/23***************************************
+
+->Codigo de barras
+composer require milon/barcode
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 16_Producto_Codigo_Barra
+git branch
+git status
+
+git add .
+git commit -m "Codigo de barra para producto y vista del producto."
+git push origin 16_Producto_Codigo_Barra
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+->Layout Cliente
+->Perfil Cliente y Administrador
+
+php artisan make:livewire Cliente/Perfil/PerfilLivewire
+php artisan make:livewire Administrador/Perfil/PerfilLivewire
+
+->Modelo y Migración Administrador
+php artisan make:model Administrador -m
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 17_Perfil_Cliente_Administrador
+git branch
+git status
+
+git add .
+git commit -m "Perfil Cliente y Administrador."
+git push origin 17_Perfil_Cliente_Administrador
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+->Modelo y Migración Subcategoria
+php artisan make:model Subcategoria -m
+
+->Modelo y Migración Marca
+php artisan make:model Marca -m
+
+->Migración CategoriaMarca
+php artisan make:migration create_categoria_marca_table
+
+->Modelo y Migración Tag
+php artisan make:model Tag -m
+
+->Migración ProductoTag
+php artisan make:migration create_producto_tag_table
+
+->Seeder UserSeeder
+php artisan make:seeder UserSeeder
+
+php artisan migrate:fresh --seed
+
+->Factory AdministradorFactory
+php artisan make:factory AdministradorFactory
+
+->Factory ClienteFactory
+php artisan make:factory ClienteFactory
+
+->CRUD CATEGORIA
+php artisan make:livewire Administrador/Marca/MarcaLivewire
+
+php artisan make:livewire Administrador/Tag/TagLivewire
+
+php artisan make:livewire Administrador/Subcategoria/SubcategoriaLivewire
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 18_SubCategoria_Tag
+git branch
+git status
+
+git add .
+git commit -m "SubCategoria, Tag, Crud producto"
+git push origin 18_SubCategoria_Tag
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+php artisan make:model Slider -m
+
+php artisan make:livewire Administrador/Slider/SliderLivewire
+
+php artisan make:controller Api\SortSliderController
+
+php artisan make:controller Web/InicioController
+
+php artisan make:livewire Web/Inicio/SliderProducto1
+php artisan make:livewire Web/Inicio/AgregarFavoritoProducto
+php artisan make:livewire Web/Inicio/SuscribirseCorreo
+
+php artisan make:livewire Web/Menu/MenuPrincipal
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git init
+git add .
+git commit -m "Nuevo commit"
+git log
+git remote add origin https://github.com/Mersmith/puntoventaecommerce.git
+git push origin master
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+php artisan make:livewire Web/Menu/MenuBuscador
+php artisan make:livewire Web/Menu/MenuCarrito
+php artisan make:livewire Web/Menu/MenuFavorito
+
+php artisan make:livewire Administrador/Menu/MenuPrincipal
+
+php artisan vendor:publish --tag=laravel-pagination
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+->Instalar
+composer require bumbummen99/shoppingcart
+php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
+
+php artisan make:livewire Web/Producto/AgregarCarritoSinVariacion
+php artisan make:livewire Web/Producto/AgregarCarritoVariacionColor
+php artisan make:livewire Web/Producto/AgregarCarritoVariacionMedida
+php artisan make:livewire Web/Producto/AgregarCarritoVariacionMedidaColor
+
+->Crear la carpeta Helpers y el archivo con sus funciones
+->En composer.json 
+   "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        },
+        "files": [
+            "app/Helpers/Helpers.php"
+        ]
+    },
+
+->Luego ejecutar
+composer dump-autoload
+
+->Crear estas migraciones, factories y seeders para las variaciones
+php artisan make:model Color -ms
+php artisan make:migration create_color_producto_table
+
+php artisan make:model Medida -mf
+php artisan make:migration create_color_medida_table
+php artisan make:migration create_medida_producto_table
+
+php artisan make:factory CategoriaFactory
+
+php artisan make:factory SubcategoriaFactory
+
+php artisan make:seeder ColorProductoSeeder
+php artisan make:seeder MedidaSeeder
+php artisan make:model ColorMedida
+php artisan make:model ColorProducto
+php artisan make:model MedidaProducto
+
+php artisan make:seeder ColorMedidaSeeder
+
+->Componentes de variación de editar producto
+php artisan make:livewire Administrador/Producto/ComponenteVariaMedida
+php artisan make:livewire Administrador/Producto/ComponenteVariaMedidaColor
+php artisan make:livewire Administrador/Producto/ComponenteVariaColor
+
+php artisan make:livewire Administrador/Producto/StockVariaMedida
+php artisan make:livewire Administrador/Producto/StockVariaMedidaColor
+
+php artisan make:livewire Administrador/Color/ColorLivewire
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+php artisan make:livewire Web/Tienda/TiendaPagina
+
+->Eventos y oyentes para la tabla shoppingcart
+->Antes de esos crear los Eventos en  para que EventServiceProvider se cree solo los listeners
+
+Login::class => [
+            "App\Listeners\MergeTheCartLogin"
+        ],
+
+        Logout::class => [
+            "App\Listeners\MergeTheCartLogout"
+        ]
+
+php artisan event:generate
+
+->Tener 2 instancias de shoppingcart shopping y wishlist
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+->Subiendo otra vez el proyecto
+
+git init
+git add .
+git commit -m "first commit"
+git log
+git remote add origin https://github.com/Mersmith/puntoventa.git
+git push origin master

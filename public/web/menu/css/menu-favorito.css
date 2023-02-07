@@ -1,0 +1,66 @@
+.contenedor_icono_favorito .cantidad_favorito {
+    position: absolute;
+    top: -14px;
+    right: -8px;
+    background-color: #ffa03d;
+    border-radius: 50px;
+    padding: 5px;
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+.contenedor_menu_favorito {
+    overflow-y: auto;
+    display: block;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    max-height: calc(100vh - 150px);
+}
+
+.contenedor_menu_favorito::-webkit-scrollbar {
+    display: none;
+}
+
+.menu_favorito_item {
+    margin: 5px 0px;
+    display: flex;
+}
+
+.menu_favorito_item img {
+    height: 80px;
+    padding: 8px;
+}
+
+/*Contenedor Detalle Carrito*/
+.contenedor_ir_favoritos {
+    width: 100%;
+    border-top: 1px solid #e5e7eb;
+    padding: 5px 5px 2px 5px;
+    margin-top: 5px;
+    position: sticky;
+    bottom: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenedor_ir_favoritos a {
+    background-color: #ff8809;
+    font-size: 16px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor_ir_favoritos a:hover {
+    background-color: #009eff;
+}

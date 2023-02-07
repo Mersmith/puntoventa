@@ -1,0 +1,55 @@
+/*CONTENEDOR VARIACION COLOR*/
+/*VARIACION COLOR PRODUCTO*/
+.variacion_color_producto {
+    display: flex;
+}
+
+/*ITEM COLOR PRODUCTO*/
+.contenedor_producto_variacion_color label {
+    cursor: pointer;
+}
+
+.variacion_color_producto .item_color_producto {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor_producto_variacion_color input[type="radio"] {
+    display: none;
+}
+
+.contenedor_producto_variacion_color input[type="radio"]:checked + span {
+    border: 1px solid rgba(37, 37, 37, 0.959);
+}
+
+.contenedor_producto_variacion_color label span {
+    display: flex;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.contenedor_producto_variacion_color label span i {
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/*ESTILOS CONTROLES*/
+.contenedor_producto_variacion_color .controles_variacion_color {
+    display: flex;
+    margin-top: 5px;
+}
+
+.contenedor_producto_variacion_color .variacion_color_boton_agregar {
+    background-color: #ff8809;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.contenedor_producto_variacion_color .variacion_color_boton_agregar:hover {
+    background-color: #009eff;
+}

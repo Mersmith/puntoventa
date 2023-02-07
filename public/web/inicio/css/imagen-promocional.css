@@ -1,0 +1,33 @@
+/*SLIDER PRINCIPAL INICIO*/
+.contenedor_imagen_promocional {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/*SLIDER IMAGENES*/
+.contenedor_imagen_promocional .imagen_promocional_imagen {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .contenedor_imagen_promocional {
+        height: 400px;
+    }
+
+    .contenedor_imagen_promocional .imagen_promocional_imagen {
+        height: 400px;
+    }
+}
+
+@media (max-width: 500px) {
+    .contenedor_imagen_promocional {
+        height: 290px;
+    }
+
+    .contenedor_imagen_promocional .imagen_promocional_imagen {
+        height: 290px;
+    }
+}

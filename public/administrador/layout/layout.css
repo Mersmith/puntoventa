@@ -1,0 +1,61 @@
+.contenedor_layout_administrador {
+    margin-left: 300px;
+    background: #f6fafc;
+}
+
+.contenedor_administrador_contenido{
+    padding: 20px;
+}
+
+/*ESTILOS PANEL*/
+.contenedor_panel_producto_admin {
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+}
+
+/*ESTILOS NO HAY ELEMENTOS EN UNA LISTA*/
+.contenedor_no_existe_elementos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #aaaaaa;
+    font-size: 24px;
+}
+
+.contenedor_boton_scroll_top{
+    position: fixed;
+    background-color: #f18f26;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    bottom: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.contenedor_boton_scroll_abajo{
+    position: fixed;
+    background-color: #009EF7;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .contenedor_layout_administrador {
+        margin-left: 0px;
+    }
+}

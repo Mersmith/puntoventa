@@ -1,0 +1,30 @@
+/*CONTENEDOR PRODUCTOS ESPECIALES*/
+.contenedor_productos_especiales {
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-gap: 10px;
+}
+
+.contenedor_productos_especiales div {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+/*SLIDER IMAGENES*/
+.contenedor_productos_especiales .productos_especiales_imagen {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .contenedor_productos_especiales {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}

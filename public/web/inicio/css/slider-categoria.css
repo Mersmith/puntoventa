@@ -1,0 +1,14 @@
+/*SLIDER PRINCIPAL INICIO*/
+.contenedor_slider_categoria {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.contenedor_slider_categoria .slider_categoria_item {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+

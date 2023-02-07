@@ -1,0 +1,18 @@
+/*Estilos producto sin variacion*/
+.contenedor_producto_sin_variacion .controles_sin_varicion {
+    display: flex;
+    margin-top: 5px;
+}
+
+.contenedor_producto_sin_variacion .sin_variacion_boton_agregar {
+    background-color: #ff8809;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.contenedor_producto_sin_variacion .sin_variacion_boton_agregar:hover {
+    background-color: #009eff;
+}

@@ -1,0 +1,188 @@
+.contenedor_pie_pagina {
+    margin-top: 30px;
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+        "contenedor_pie_contacto  contenedor_pie_informacion"
+        "contenedor_pie_derechos contenedor_pie_derechos";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto 100px;
+    background-color: #eee;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+/* CONTENEDOR FORMULARIO */
+.contenedor_pie_pagina .contenedor_pie_contacto {
+    grid-area: contenedor_pie_contacto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-right: 1px solid #ccc;
+}
+
+/* CONTENEDOR INFORMACIÓN */
+.contenedor_pie_pagina .contenedor_pie_informacion {
+    grid-area: contenedor_pie_informacion;
+    padding: 50px;
+}
+
+/* CONTENEDOR DERECHOS */
+.contenedor_pie_pagina .contenedor_pie_derechos {
+    grid-area: contenedor_pie_derechos;
+    padding: 10px 50px;
+    font-size: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONTENEDOR FORMULARIO */
+.contenedor_pie_pagina .contenedor_titulo {
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.contenedor_pie_pagina .contenedor_titulo h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/*Formulario*/
+.contenedor_pie_pagina form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_pie_pagina form input[type="text"],
+.contenedor_pie_pagina form input[type="email"],
+.contenedor_pie_pagina form input[type="tel"] {
+    display: block;
+    width: 100%;
+    padding: 8px 8px;
+    font-weight: 400;
+    background-color: #f7f7f7;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    color: #333;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.contenedor_pie_pagina form .contenedor_inputs_dos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor_pie_pagina form .contenedor_inputs_dos input {
+    display: flex;
+    width: 49%;
+}
+
+.contenedor_pie_pagina form input:focus {
+    outline: none;
+}
+
+.contenedor_pie_pagina form input[type="checkbox"] {
+    background-color: #f7f7f7;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    color: #333;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.contenedor_pie_pagina form .contenedor_input_checkbox a {
+    color: #f50;
+    text-decoration: underline;
+}
+
+.contenedor_pie_pagina form button {
+    padding: 8px 12px;
+    color: white;
+    background-color: #d8870e;
+    border-radius: 3px;
+}
+
+.contenedor_pie_pagina form button:hover {
+    background-color: #343a40;
+}
+
+/*Fin Formulario*/
+
+/* CONTENEDOR INFORMACIÓN */
+.contenedor_pie_pagina .contenedor_informacion {
+    padding: 25px 0px;
+}
+
+.contenedor_pie_pagina .contenedor_mapa iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.contenedor_pie_pagina .contenedor_redes_sociales {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor_pie_pagina .contenedor_redes_sociales i {
+    margin-right: 7px;
+}
+
+.contenedor_pie_pagina .contenedor_redes_sociales div {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor_pie_pagina .contenedor_redes_sociales div p {
+    color: #333;
+    font-weight: bold;
+    margin-right: 7px;
+}
+
+/*Fin Informacion*/
+
+/*Derechos*/
+
+@media (max-width: 900px) {
+    .contenedor_pie_pagina {
+        display: grid;
+        width: 100%;
+        grid-template-areas:
+            "contenedor_pie_contacto"
+            "contenedor_pie_informacion"
+            "contenedor_pie_derechos";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto 100px;
+    }
+
+    .contenedor_pie_pagina form .contenedor_inputs_dos {
+        flex-direction: column;
+    }
+
+    .contenedor_pie_pagina form .contenedor_inputs_dos input {
+        width: 100%;
+    }
+
+    .contenedor_pie_pagina .contenedor_pie_contacto,
+    .contenedor_pie_pagina .contenedor_pie_informacion,
+    .contenedor_pie_pagina .contenedor_pie_derechos {
+        padding: 15px;
+    }
+
+    .contenedor_pie_pagina .contenedor_pie_contacto {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .contenedor_pie_pagina .contenedor_redes_sociales {
+        flex-direction: column;
+    }
+}
